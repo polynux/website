@@ -1,11 +1,138 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+    <div class="preheader">
+        <p>
+            <strong>Developer • Open Source Enthusiast • Code Explorer</strong>
+        </p>
+    </div>
+
+    <div class="tui-container">
+        <div class="main-content">
+            <header>
+                <h1># polynux@terminal:~$ whoami</h1>
+            </header>
+
+            <main>
+                <section>
+                    <p
+                        style="font-size: 1.2em; text-align: center; margin: 2rem 0;"
+                    >
+                        Welcome to my terminal! I'm polynux, a developer
+                        passionate about open source.
+                    </p>
+
+                    <h2>polynux@terminal:~$ ls -la projects/</h2>
+                    <div class="tui-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td
+                                        ><a
+                                            is-="button"
+                                            size-="small"
+                                            variant-="background2"
+                                            href="https://github.com/polynux"
+                                            >github/</a
+                                        ></td
+                                    >
+                                    <td>directory</td>
+                                    <td
+                                        >45 repositories of code and experiments</td
+                                    >
+                                </tr>
+                                <tr>
+                                    <td
+                                        ><a
+                                            is-="button"
+                                            size-="small"
+                                            variant-="background2"
+                                            href="https://grossebeut.eu"
+                                            >website/</a
+                                        ></td
+                                    >
+                                    <td>link</td>
+                                    <td>Personal website and blog</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>polynux@terminal:~$ cat contact.txt</h2>
+                    <pre
+                        class="tui-pre contact-info">Location: La rue, France
+GitHub:   <a is-="button" variant-="background2" href="https://github.com/polynux">https://github.com/polynux</a>
+Website:  <a is-="button" variant-="background2" href="https://grossebeut.eu">https://grossebeut.eu</a>
+Twitter:  <a is-="button" variant-="background2" href="https://twitter.com/larue_off">@larue_off</a>
+Email:    Available on request</pre>
+
+                    <h2>polynux@terminal:~$ git log --oneline</h2>
+                    <pre
+                        class="tui-pre git-log">* 45 repositories created and maintained
+* Open source contributor and enthusiast  
+* Always learning and building new things
+* Available for collaboration and interesting projects
+* Passionate about clean code and innovative solutions</pre>
+
+                    <h2>polynux@terminal:~$ echo "Quick Links"</h2>
+                    <div
+                        class="tui-button-group"
+                        style="text-align: center; margin: 2rem 0;"
+                    >
+                        <a
+                            is-="button"
+                            variant-="background2"
+                            href="https://github.com/polynux"
+                            class="tui-button">&#xe709 GitHub Profile</a
+                        >
+                        <a
+                            is-="button"
+                            variant-="background2"
+                            href="https://github.com/polynux?tab=repositories"
+                            class="tui-button">&#xe702 Repositories</a
+                        >
+                        <a
+                            is-="button"
+                            variant-="background2"
+                            href="https://grossebeut.eu"
+                            class="tui-button">&#xf0ac Personal Website</a
+                        >
+                        <a
+                            is-="button"
+                            variant-="background2"
+                            href="https://twitter.com/larue_off"
+                            class="tui-button">&#xe8c9 Twitter</a
+                        >
+                    </div>
+
+                    <div class="tui-separator"></div>
+
+                    <p class="cursor-line">
+                        polynux@terminal:~$ <span class="tui-cursor">█</span>
+                    </p>
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            <p>
+                <small
+                    >Built with <a
+                        is-="button"
+                        variant-="background2"
+                        href="https://webtui.ironclad.sh/">WebTUI</a
+                    > - Terminal UI for the web</small
+                >
+            </p>
+        </footer>
+    </div>
 </Layout>
